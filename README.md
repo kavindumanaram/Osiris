@@ -110,11 +110,11 @@ Create angular project using Angular CLI
 - project architec is shoen in appStructure.txt in side the project 
 - open teerminal inside the vs code
 
-<code> ng g c orders --spec=false --s // means do not create the spec.ts file and separate css files <code>
+<code> ng g c orders --spec=false --s // means do not create the spec.ts file and separate css files 
  
-<code> ng g c orders/order --spec=false --s <code>
+<code> ng g c orders/order --spec=false --s
  
-<code> ng g c orders/order-items --spec=false --s <code>
+<code> ng g c orders/order-items --spec=false --s </code>
  
 - to create service classes inside shared folder
  
@@ -138,7 +138,6 @@ Create angular project using Angular CLI
 
 <code> ng generate module app-routing --flat --module=app </code>
 
-### TODO DUP
 
 ### Todos
 
