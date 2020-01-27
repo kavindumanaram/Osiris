@@ -32,21 +32,38 @@ npm-debug.log.*
 *.sqlsuo
 packages
 
-# Mac OS System Files
-.DS_Store*
+# angular data
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
-# Xcode User Data
-xcuserdata/
-project.xcworkspace/
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-#PyCharm Projects
-*.pyc
-.idea/
-Html5Apps
-Logs
-Logs/*
-/src/Server/src/UpgradeLog2.htm
-/src/Server/src/UpgradeLog.htm
-src/Server/src/UpgradeLog4.htm
-src/Services/SFDC/src/.vs/config/applicationhost.config
-src/Server/src/Macs.sln.DotSettings.user
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
