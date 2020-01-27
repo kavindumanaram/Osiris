@@ -97,11 +97,52 @@ select all the tables -> And click Finish
 |Data Content class|DBModel|
 |Controller Name|CustomerController|
 
+-like that create item and order controllers
+
+Create angular project using Angular CLI
+
+<code>ng new Osiris</code>
+
+- open vscode
+- go to https://getbootstrap.com/ -> get startted -> copy css/js cdn
+- go to project -> src/index.html coppy inside <head>
+- go to google -> fontawesome cdn -> copy cdn and past latter part of head
+- project architec is shoen in appStructure.txt in side the project 
+- open teerminal inside the vs code
+
+<code> ng g c orders --spec=false --s // means do not create the spec.ts file and separate css files <code>
+ 
+<code> ng g c orders/order --spec=false --s <code>
+ 
+<code> ng g c orders/order-items --spec=false --s <code>
+ 
+- to create service classes inside shared folder
+ 
+<code> ng g s shared/customer --spec=false </code>
+ 
+<code> ng g s shared/item --spec=false </code>
+ 
+<code> ng g s shared/order --spec=false </code>
+ 
+- now we have to create models. unfortunally angular haveno specific way to create module class therefore
+ 
+<code> ng g cl shared/customer --type=model </code>
+ 
+<code> ng g cl shared/item --type=model </code>
+ 
+<code> ng g cl shared/order --type=model </code>
+ 
+- now we have to update the model classes by properties of .net api model places properties.
+- now we have to configure routing
+- go to  app-routing.module.ts if u cannot find that generate it by
+
+<code> ng generate module app-routing --flat --module=app </code>
+
+### TODO DUP
 
 ### Todos
 
  - Write MORE Tests
- - Add Night Mode
 
 License
 ----
