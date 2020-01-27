@@ -21,9 +21,9 @@ namespace Osiris.Models
         }
     
         public long OrderId { get; set; }
-        public byte[] OrderNo { get; set; }
+        public string OrderNo { get; set; }
         public Nullable<int> CustomerId { get; set; }
-        public byte[] PMethod { get; set; }
+        public string PMethod { get; set; }
         public Nullable<decimal> GTotal { get; set; }
     
         public virtual Customer Customer { get; set; }
