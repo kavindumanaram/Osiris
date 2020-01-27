@@ -78,6 +78,26 @@
 |Order|OrderItems|
 |OrderId|OrderId|
 
+- To add ADo models
+- Soultion explora -> your project -> right click on Models -> Add -> New Item -> Data (left) -> ADO .net Entity Data Model(right) ->  Name it "DBModel" -> click add -> Entity Framework desiner from database -> Next -> New Connection
+
+- For data source - MS SQL Server (sqlClient)
+- For server name - (local)\sqlexpress
+- Select the perticular db name
+- Click on Next and Next when you cmoe the window Whchi data base objects do you want to includeto in your model
+select all the tables -> And click Finish
+
+- the DBdiagram will appear on Visual Studio
+-The rebuild the project 
+- Controller -> add -> aadd controllr -> Web API 2 Controller ->with actions unig Entity Framework -> Add
+
+| | |
+| ----------- | --------- |
+|Model Class|customer|
+|Data Content class|DBModel|
+|Controller Name|CustomerController|
+
+
 ### Todos
 
  - Write MORE Tests
