@@ -110,11 +110,9 @@ Create angular project using Angular CLI
 - project architec is shoen in appStructure.txt in side the project 
 - open teerminal inside the vs code
 
-<code> ng g c orders --spec=false --s // means do not create the spec.ts file and separate css files 
- 
-<code> ng g c orders/order --spec=false --s
- 
-<code> ng g c orders/order-items --spec=false --s </code>
+<code> ng g c orders --spec=false --s //// means do not create the spec.ts file and separate css files  
+ng g c orders/order --spec=false --s 
+ng g c orders/order-items --spec=false --s </code>
  
 - to create service classes inside shared folder
  
@@ -137,6 +135,35 @@ Create angular project using Angular CLI
 - go to  app-routing.module.ts if u cannot find that generate it by
 
 <code> ng generate module app-routing --flat --module=app </code>
+
+- inside the app-routing.module.ts
+
+<code>
+import { NgModule, Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { Routes, RouterModule } from "@angular/router";
+import { OrdersComponent } from "./orders/orders.component";
+import { OrderComponent } from "./orders/order/order.component";
+
+
+const routes: Routes = [
+  { path: "orders", component: OrdersComponent },
+  {
+    path: "order",
+    children: [
+      { path: "", component: OrderComponent },
+      { path: "edit/:id", component: OrderComponent }
+    ]
+  }
+];
+
+@NgModule({
+  declarations: [],
+  imports: [CommonModule]
+})
+export class AppRoutingModule {}
+</code>
+
 
 
 ### Todos
