@@ -139,14 +139,9 @@ ng g c orders/order-items --spec=false --s </code>
 - inside the app-routing.module.ts
 
 <code>
-import { NgModule, Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { Routes, RouterModule } from "@angular/router";
-import { OrdersComponent } from "./orders/orders.component";
-import { OrderComponent } from "./orders/order/order.component";
-
 
 const routes: Routes = [
+  { path: "", redirectTo: "order", pathMatch: "full" },
   { path: "orders", component: OrdersComponent },
   {
     path: "order",
@@ -159,13 +154,62 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterModule.forRoot(routes)]
 })
 export class AppRoutingModule {}
+
 </code>
 
+- now you can run the angular using <code> ng serve --o </code>
+- if you wanna to change the index edit the app.component.html see follwing.
 
+<code> 
 
+<div>
+     <router-outlet></router-outlet> <!--this tag replace coresponding route by its componet in app-routing.module.ts->
+</div>
+
+<code>
+
+-To add image to html page
+- add image to ./asset/img and 
+
+<code> <img src="\assets\img\logo.png" height="150" width="150" /> </code>
+
+- go to order.service.ts
+
+<code>
+
+export class OrderService {
+  formData: Order;
+
+  constructor() {}
+}
+
+</code>
+
+in app.module.ts
+
+- asdd oprder service class to as provider.
+
+<code>
+providers: [OrderService],
+</code>
+
+- definig private property in componet constructor.
+
+<code>
+ constructor(private service: OrderService) { }
+</code>
+
+- open corresponding html file 
+
+<code>
+ <form #form="ngForm" autocomplete="off"></form>
+ <!-- #form is local reference -->
+ </code>
+ 
+ - we design above form based on formdata proerty, inside Order service. We have the instance of injected order service inside the order.component.ts.
 ### Todos
 
  - Write MORE Tests
