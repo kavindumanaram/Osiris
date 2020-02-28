@@ -1,3 +1,17 @@
+# install Angular cli 7
+- install node js to windows
+- and
+
+<code>
+npm install -g @angular/cli
+</code>
+
+- and
+
+<code>
+ng new Angular7
+</code>
+
 # Osiris
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
